@@ -42,7 +42,7 @@ function App() {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/earthquakes")
+    axios.get("https://earthquake-visualizer-backend.onrender.com/api/earthquakes")
       .then(res => {
         setEarthquakes(res.data?.features || []);
         setLoading(false);
