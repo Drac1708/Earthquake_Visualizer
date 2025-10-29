@@ -16,5 +16,4 @@ def get_earthquakes():
     except Exception as e:
         return jsonify({"error": "Failed to fetch earthquake data", "details": str(e)}), 500
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# No app.run() block needed — Gunicorn will serve this app
